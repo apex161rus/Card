@@ -1,0 +1,34 @@
+.card-contaner {
+    width: 200px;
+    height: 300px;
+    position: relative;
+    perspective: 900px;
+}
+
+.card {
+    transform-style: preserve-3d;
+    transition: all 2.5s ease;
+}
+
+.front, .back {
+    border-radius: 1rem;
+    width: 200px;
+    height: 300px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backface-visibility: hidden;
+
+    background-size: cover;
+    background-position: center;
+
+}
+
+.card-contaner:hover .card {
+    transform:  rotateY(180deg);
+}
+
+.back {
+    transform:  rotateY(180deg);
+}
